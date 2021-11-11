@@ -16,11 +16,13 @@ document.querySelector(".people").prepend(warning);
 warning.classList.add("hidden");
 
 const resetF = function () {
-  bill.value = "0";
-  people.value = "0";
+  bill.value = 0;
+  people.value = 0;
   total.textContent = "0";
   tipAmount.textContent = "0";
-  custom.value = "0";
+  custom.value = 0;
+  warning.classList.add("hidden");
+
 };
 
 resetF();
@@ -38,7 +40,7 @@ const cal = function () {
 //button event
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", function () {
-    
+
     tipNumber = parseFloat(btn[i].textContent);
     cal();
   });

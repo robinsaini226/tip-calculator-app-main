@@ -19,7 +19,7 @@ body {
   background-color: var(--light-grayish-cyan1);
   font-family: var(--ff);
   font-size: var(--fs);
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,17 +33,16 @@ h1 {
   width: 4ch;
 }
 .container {
-  width: 40em;
-  height: 20em;
-  min-width: 20em;
+  max-width: 100%;
+  width: fit-content;
   background-color: var(--white);
   border-radius: 1.5em;
   display: flex;
-  padding: 2em;
+  padding: 2em ;
 }
 .left {
-  width: 50%;
-  height: 100%;
+  /* width: 50%; */
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -53,7 +52,6 @@ label {
   color: var(--dark-grayish-cyan1);
 }
 input {
-  width: 80%;
   height: 3em;
   border: none;
   background-color: var(--light-gray);
@@ -95,8 +93,7 @@ input {
 }
 
 .right {
-  width: 50%;
-  height: 100%;
+  /* height: 100%; */
   background-color: var(--very-dark-cyan);
   border-radius: 1.5em;
   padding: 2em;
@@ -107,6 +104,8 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
 }
 .right > div:nth-child(2) {
   margin-bottom: 2.5em;
@@ -159,4 +158,23 @@ span {
 }
 .hidden{
     display: none;
+}
+
+@media (max-width:980px) {
+  .container{
+    min-width: 10em;
+    /* width: fit-content; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3em;
+    font-size: 1em;
+  }
+  .buttons{
+    grid-template-columns: 1fr 1fr;
+  }
+  .right h2{
+    font-size: 1.4em;
+  }
+  
 }
