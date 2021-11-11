@@ -52,7 +52,7 @@ label {
   color: var(--dark-grayish-cyan1);
 }
 input {
-  width: 0%;
+  width: 90%;
   height: 3em;
   border: none;
   background-color: var(--light-gray);
